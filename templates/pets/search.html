@@ -1,0 +1,275 @@
+{% extends 'basepets.html' %}
+
+{% load static %}
+
+{% block content1 %}
+
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+  <div class="container">
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="{% url 'index' %}">Home</a>
+        </li>
+        <li class="breadcrumb-item active">
+          <a href="{% url 'search' %}">Search</a>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+ <section id="showcase">
+    <div class="container text-center">
+      <div class="home-search p-5">
+        <div class="overlay p-5">
+          <h1 class="display-4 mb-4">
+            Find my pets
+          </h1>
+          <p class="lead"></p>
+          <div class="search">
+            <form action="search.html">
+              <!-- Form Row 1 -->
+              <div class="form-row">
+                <div class="col-md-4 mb-3">
+                  <label class="sr-only">Name</label>
+                  <input type="text" name="Name" class="form-control" placeholder="Name">
+                </div>
+
+                <div class="col-md-4 mb-3">
+                  <label class="sr-only">Weight</label>
+                  <input type="text" name="weight" class="form-control" placeholder="Weight(kg)">
+                </div>
+
+                <div class="col-md-4 mb-3">
+                  <label class="sr-only">Gender</label>
+                  <select name="gender" class="form-control">
+                    <option selected="true" disabled="disabled">Gender</option>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                  </select>
+                </div>
+              </div>
+              <!-- Form Row 2 -->
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label class="sr-only">Categories</label>
+                  <select name="categories" class="form-control">
+                    <option selected="true" disabled="disabled">Categories (All)</option>
+                    <option value="cat">cat</option>
+                    <option value="dog">dog</option>
+                    <option value="turtle">turtle</option>
+                    <option value="bird">bird</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <select name="province" class="form-control" id="type">
+                    <option selected="true" disabled="disabled">Province (Any)</option>
+                    <option value="Zhengzhou">Zhengzhou</option>
+                    <option value="Luoyang">Luoyang</option>
+                    <option value="Pingdingshan">Pingdingshan</option>
+                    <option value="Anyang">Anyang</option>
+                    <option value="Hebi">Hebi</option>
+                    <option value="Xinxiang">Xinxiang</option>
+                    <option value="Jiaozuo">Jiaozuo</option>
+                    <option value="Pushui">Pushui</option>
+                    <option value="Xuchang">Xuchang</option>
+                    <option value="Luohe">Luohe</option>
+                    <option value="Sanmenxia">Sanmenxia</option>
+                    <option value="Shangqiu">Shangqiu</option>
+                    <option value="Zhoukou">Zhoukou</option>
+                    <option value="Zhumadian">Zhumadian</option>
+                    <option value="Nanyang">Nanyang</option>
+                    <option value="Xinyang">Xinyang</option>
+                    <option value="Jiyuan">Jiyuan</option>
+                  </select>
+                </div>
+                
+                
+              </div>
+              <button class="btn btn-secondary btn-block mt-4" type="submit">Submit form</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Listings -->
+  <section id="listings" class="py-5">
+    <div class="container">
+      <h3 class="text-center mb-3">Latest Listings</h3>
+      <div class="row">
+        <!-- Listing 1 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="assets/img/homes/home-1.jpg" alt="">
+            <div class="card-img-overlay">
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary">Daisy</h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> Zhengzhou</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Gender: Male</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Weight: 2.5kg</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Categories: cat</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Location: Zhengzhou</div>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-user"></i> JimmyKong</div>
+              </div>
+              <div class="row text-secondary pb-2">
+                <div class="col-6">
+                  <i class="fas fa-clock"></i> 5 days ago</div>
+              </div>
+              <hr>
+              <a href="listing.html" class="btn btn-primary btn-block">More Info</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 2 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="assets/img/homes/home-2.jpg" alt="">
+            <div class="card-img-overlay">
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary">Daisy</h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> Zhengzhou</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Gender: Male</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Weight: 2.5kg</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Categories: cat</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Location: Zhengzhou</div>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-user"></i> JimmyKong</div>
+              </div>
+              <div class="row text-secondary pb-2">
+                <div class="col-6">
+                  <i class="fas fa-clock"></i> 5 days ago</div>
+              </div>
+              <hr>
+              <a href="listing.html" class="btn btn-primary btn-block">More Info</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 3 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="assets/img/homes/home-3.jpg" alt="">
+            <div class="card-img-overlay">
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary">Daisy</h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> Zhengzhou</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Gender: Male</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Weight: 2.5kg</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Categories: cat</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Location: Zhengzhou</div>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-user"></i> JimmyKong</div>
+              </div>
+              <div class="row text-secondary pb-2">
+                <div class="col-6">
+                  <i class="fas fa-clock"></i> 5 days ago</div>
+              </div>
+              <hr>
+              <a href="listing.html" class="btn btn-primary btn-block">More Info</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-5 bg-secondary text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4">
+          <i class="fas fa-comment fa-4x mr-4"></i>
+          <hr>
+          <h3>ABOUT PETFINDER</h3>
+          <p>About Petfinder</p>
+          <p>FAQs</p>
+          <p>Partnerships</p>
+          <p>Terms of Service</p>
+          <p>Mobile Site & Apps</p>
+          <p>Petfinder Foundation</p>
+          <p>Put Petfinder On Your Site</p>
+          <p>Free Widgets & Graphics</p>
+          <p>For Developers</p>
+          <p>Contact Us</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-home fa-4x mr-4"></i>
+          <hr>
+          <h3>PET ADOPTION</h3>
+          <p>Dog Adoption</p>
+          <p>Cat Adoption</p>
+          <p>Other Pet Adoption</p>
+          <p>Search Adoption Organizations</p>
+          <p>Happy Tails Pet Adoption Stories</p>
+          <p>Local Adoption Events</p>
+          <p>Shelters & Rescues</p>
+          <p>Dog Quiz</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-suitcase fa-4x mr-4"></i>
+          <hr>
+          <h3>PET CARE TOPICS</h3>
+          <p>Dog Care</p>
+          <p>Dog Breeds</p>
+          <p>Cat Care</p>
+          <p>Cat Breeds</p>
+          <p>All Pet Care</p>
+          <p>Pet Care Videos</p>
+          <p>Helping Pets</p>
+        </div>
+      </div>
+    </div>
+  </section> 
+
+{% endblock %}

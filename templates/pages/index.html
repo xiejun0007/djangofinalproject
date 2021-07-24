@@ -1,7 +1,51 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
 
-<h1>Home</h1>
+<!-- Showcase -->
+  <section id="showcase1">
+    <div class="text-center">
+      <h1 style="width: 60%; margin: auto">
+                Take up one idea. Make that one idea your life--think of it,
+                dream of it, live on that idea. Let the brain, muscles, 
+                nerves, every part of your body, be full of that idea, 
+                and just leave every other idea alone. This is the way to success.
+      </h1>
+    </div>
+    </div>
+  </section>
+
+<!-- Choices -->
+<section id="team" class="py-5">
+
+    <div class="container">
+      <h2 class="text-center">Looking For ... </h2>
+      <div class="row text-center">
+        <div class="col-md-5">
+            <a class='nav-link' href="{% url 'pets' %}">
+                <img src="{% static 'img/pets.png' %}" alt="" class="rounded-circle mb-3">
+            </a>
+            <hr>
+            <a class='nav-link' href="{% url 'pets' %}">
+                <h4>Pets</h4>
+            </a>
+          </div>
+        <div class="col-md-2">
+        </div>
+
+        <div class="col-md-5">
+            <a class='nav-link' href="{% url 'peoples' %}">
+                <img src="{% static 'img/people.png' %}" alt="" class="rounded-circle mb-3">
+            </a>
+            <hr>
+            <a class='nav-link' href="{% url 'peoples' %}">
+                <h4>People</h4>
+            </a>
+        </div>
+      </div>
+    </div>
+  </section>  
 
 {% endblock %}

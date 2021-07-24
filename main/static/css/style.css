@@ -19,6 +19,31 @@ img {
   margin-right: 0.4rem;
 }
 
+/* index page */
+
+#showcase1 {
+  background: url(../img/hug.jpg) no-repeat top center fixed;
+  position: relative;
+  min-height: 300px;
+  color: #fff;
+  padding-top: 6rem;
+}
+
+
+#showcase-title{
+  color: #0c3c97;
+  font-family: "Montserrat",sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2.875rem;
+  line-height: 3.625rem;
+  margin: 0;
+  margin-bottom: 2.875rem;
+  width: auto;
+  text-transform: uppercase;
+}
+
+/* pets homepages */
 #showcase {
   background: url(../img/showcase.jpg) no-repeat top center fixed;
   position: relative;
@@ -63,6 +88,7 @@ img {
   overflow: hidden;
   min-height: 200px;
 }
+
 #showcase-inner::before {
   content: "";
   position: absolute;
@@ -72,6 +98,7 @@ img {
   width: 100%;
   background: rgba(32, 134, 107, 0.8);
 }
+
 #showcase-inner.showcase-search {
   min-height: 270px;
 }
@@ -85,8 +112,14 @@ img {
 }
 
 @media (max-width: 991px) {
-  #showcase {
+  #showcase1 {
     padding-top: 4rem;
+  }
+  #showcase{
+    padding-top: 4rem;
+  }
+  #showcase1 h1 {
+    font-size: 40px;
   }
   #showcase h1 {
     font-size: 40px;
@@ -106,6 +139,15 @@ img {
   #showcase p {
     display: none;
   }
+  #showcase1 {
+    padding-top: 3rem;
+  }
+  #showcase1 h1 {
+    font-size: 40px;
+  }
+  #showcase1 p {
+    display: none;
+  }
   #top-bar {
     text-align: center;
   }
@@ -116,9 +158,12 @@ img {
 
 @media (max-width: 576px) {
   #showcase h1 {
-    font-size: 30px;
+    font-size: 20px;
+  }
+  #showcase1 h1 {
+    font-size: 20px;
   }
   #showcase-inner h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
 }

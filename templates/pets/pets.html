@@ -1,0 +1,92 @@
+{% extends 'basepets.html' %}
+
+{% load static %}
+
+{% block content1 %}
+
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+  <div class="container">
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="{% url 'index' %}">Home</a>
+        </li>
+        <li class="breadcrumb-item active">
+          <a href="{% url 'pets' %}">News</a>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<br>
+<h5 style="padding-left: 20px;">This is the recent news around all provinces of China</h5>
+
+<!-- News -->
+<section id="listings" class="py-4">
+    <div class="container">
+      <div class="row">
+          
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/news01.jpg' %}" alt="" />
+            <div class="card-img-overlay">
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+              <h6 class="text-primary">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</h6>
+              <a href="" class="btn btn-primary btn-block" style="background-color: rgb(137, 157, 192);">View Article</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/news01.jpg' %}" alt="" />
+            <div class="card-img-overlay">
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+              <h6 class="text-primary">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</h6>
+              <a href="" class="btn btn-primary btn-block" style="background-color: rgb(137, 157, 192);">More Info</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/news01.jpg' %}" alt="" />
+            <div class="card-img-overlay">
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+              <h6 class="text-primary">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</h6>
+              <a href="" class="btn btn-primary btn-block" style="background-color: rgb(137, 157, 192);">More Info</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/news01.jpg' %}" alt="" />
+            <div class="card-img-overlay">
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+              <h6 class="text-primary">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</h6>
+              <a href="" class="btn btn-primary btn-block" style="background-color: rgb(137, 157, 192);">View Article</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+</section>
+
+{% endblock %}
