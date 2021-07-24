@@ -1,4 +1,6 @@
-{% extends 'basepeoples.html' %} 
+{% extends 'basepeoples.html' %}
+
+
 
 {% block content1 %}
 
@@ -10,7 +12,10 @@
         <li class="breadcrumb-item">
           <a href="{% url 'index' %}"> <i class="fas fa-home"></i> Home</a>
         </li>
-        <li class="breadcrumb-item active">Peoples</li>
+        <li class="breadcrumb-item">
+          <a href="{% url 'peoples' %}">Browse peoples</a>
+        </li>
+        <li class="breadcrumb-item active">Search Results</li>
       </ol>
     </nav>
   </div>
@@ -32,6 +37,7 @@
   </div>
   </form>
 </section>
+
 
 <!-- Peoples -->
 <section id="peoples" class="py-4">
@@ -132,5 +138,4 @@
     </div>
   </div>
 </section>
-
-{% endblock %}
+{% endblock  %}
